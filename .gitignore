@@ -1,0 +1,7 @@
+# ディレクトリを無視する
+Include/
+Lib/
+Scripts/
+.cache
+pyvenv.cfg
+
