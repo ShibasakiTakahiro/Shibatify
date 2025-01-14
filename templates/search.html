@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>検索結果</title>
+</head>
+<body>
+    <h1>検索結果</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form action="/recommend" method="post">
+        {% for track in tracks %}
+            <input type="radio" name="selected_track" value="{{ track.id }}" required>
+            {{ track.name }} - {{ track.artist }}<br>
+        {% endfor %}
+        <button type="submit">推薦を表示</button>
+    </form>
+    <a href="/">検索に戻る</a>
+</body>
+</html>
