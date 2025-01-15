@@ -5,6 +5,7 @@
     <title>推薦結果</title>
 </head>
 <body>
+    <div style="text-align: center">
     <h1>推薦された楽曲</h1>
     {% if track %}
         <p>{{ track.name }} - {{ track.artist }}</p>
@@ -12,5 +13,6 @@
         <p>推薦する楽曲が見つかりませんでした。</p>
     {% endif %}
     <a href="/">再度検索する</a>
+    </div>
 </body>
 </html>
