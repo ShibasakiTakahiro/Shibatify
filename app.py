@@ -10,12 +10,11 @@ app = Flask(__name__)
 # client_secret = '97601c685ab9417da4e3d1904d308f6a'  # ここにあなたのクライアントシークレットを入力
 # sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=client_id, client_secret=client_secret))
 
-
 sp = spotipy.Spotify(auth_manager=SpotifyAnon())
 def search_tracks(query):
     results = sp.search(q=query, type='track', limit=5)
     tracks = results['tracks']['items']
-    return [{'name': track['name'], 'id': track['id'], 'artist': track['artists'][0]['name']} for track in tracks]
+    return [{'name': track['name'], 'id': track['id'], 'artist': track['artists'][0]['name'],'album_art': track['album']['images'][0]['url']} for track in tracks]
 
 # 類似楽曲の推薦
 def recommend_tracks(seed_track):
@@ -46,4 +45,4 @@ def recommend():
     return render_template('recommend.html', track=recommendation)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
