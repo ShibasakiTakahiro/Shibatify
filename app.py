@@ -41,8 +41,12 @@ def recommend():
     if not selected_track:
         error_message = "1曲を選択してください。"
         return render_template('search.html', tracks=[], error=error_message)
-    recommendation = recommend_tracks(selected_track)
-    return render_template('recommend.html', track=recommendation)
+    recommendation = recommend_tracks(selected_track) # 推薦された楽曲の情報を取得
+    if recommendation:
+        return render_template('recommend.html', track=recommendation)
+    else:
+        error_message="楽曲が見つかりませんでした"
+        return render_template('recommend.html', track=None, error=error_message)
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug=True)

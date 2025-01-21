@@ -6,13 +6,24 @@
 </head>
 <body>
     <div style="text-align: center">
-    <h1>推薦された楽曲</h1>
-    {% if track %}
-        <p>{{ track.name }} - {{ track.artist }}</p>
-    {% else %}
-        <p>推薦する楽曲が見つかりませんでした。</p>
-    {% endif %}
-    <a href="/">再度検索する</a>
+        <h1>推薦された楽曲</h1>
+        {% if track %}
+            <p>{{ track.name }} - {{ track.artist }}</p>
+            <!-- Spotify埋め込みプレイヤー -->
+            <iframe 
+                src="https://open.spotify.com/embed/track/{{ track.id }}" 
+                width="30%" 
+                frameborder="0" 
+                allowtransparency="true" 
+                allow="encrypted-media">
+            </iframe>
+            <div style="margin-top: -10px;">
+                <a href="/">再度検索する</a>
+            </div>
+        {% else %}
+            <p>推薦する楽曲が見つかりませんでした。</p>
+            <a href="/">再度検索する</a>
+        {% endif %}
     </div>
 </body>
 </html>
