@@ -4,5 +4,6 @@ Lib/
 Scripts/
 share/
 .cache
+.env
 pyvenv.cfg
 

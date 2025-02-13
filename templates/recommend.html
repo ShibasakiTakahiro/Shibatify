@@ -3,20 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>推薦結果</title>
+    <style>
+        .content {
+            text-align: center;
+        }
+        iframe {
+            width: 30%;
+        }
+        .description {
+            margin-top: 20px;
+            text-align: center;
+            width: 30%;
+            margin-left: auto;
+            margin-right: auto;
+            word-wrap: break-word;
+        }
+    </style>
 </head>
 <body>
-    <div style="text-align: center">
+    <div class="content">
         <h1>推薦された楽曲</h1>
         {% if track %}
             <p>{{ track.name }} - {{ track.artist }}</p>
             <!-- Spotify埋め込みプレイヤー -->
             <iframe 
                 src="https://open.spotify.com/embed/track/{{ track.id }}" 
-                width="30%" 
                 frameborder="0" 
                 allowtransparency="true" 
                 allow="encrypted-media">
             </iframe>
+
+            <!-- 楽曲の解説 -->
+            <div class="description">
+                <h3>楽曲の解説</h3>
+                <p>{{ description }}</p>
+            </div>
+            
             <div style="margin-top: -10px;">
                 <a href="/">再度検索する</a>
             </div>
