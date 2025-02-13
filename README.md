@@ -23,10 +23,10 @@
 ## 操作方法
 
 1. 楽曲・アーティスト検索指定URLを開くと「楽曲リコメンドシステム」の画面が表示されます。検索バーで楽曲やアーティストを検索してください。この画面では「ビリー・アイリッシュ」と検索しており、ユーザーは好きなアーティストや楽曲を入力できます。
-![index_after](https://github.com/user-attachments/assets/d8bb3514-0265-4112-a042-cfd4610dd6e4)
+| ![index_after](https://github.com/user-attachments/assets/d8bb3514-0265-4112-a042-cfd4610dd6e4) |
 
 2. 検索結果と楽曲選択検索後、5曲程度のリストが表示されます。好みの楽曲を選択し、「推薦を表示」ボタンをクリックします。検索結果には「bad guy」など、入力に基づいた関連楽曲が表示されます。この例では「BIRDS OF A FEATHER」を選択しています。
-![search_after](https://github.com/user-attachments/assets/9abef3cf-ebce-46ed-ae87-a372abb2b13e)
+| ![search_after](https://github.com/user-attachments/assets/9abef3cf-ebce-46ed-ae87-a372abb2b13e) |
 
 3. 推薦楽曲と解説選択した楽曲を基に、Spotify APIが類似曲を推薦し、Spotifyプレイヤーで再生可能です。また、ChatGPT APIによる楽曲解説も表示されます。この画面では、Doja Catの「Agora Hills」が推薦されており、Spotifyの埋め込みプレイヤーで再生できます。下にはChatGPTによる詳細な楽曲解説が表示され、楽曲の特徴や魅力を説明します。
-![recommend](https://github.com/user-attachments/assets/73a22409-871d-45a3-8ffd-c758991a46d7)
+| ![recommend](https://github.com/user-attachments/assets/73a22409-871d-45a3-8ffd-c758991a46d7) |
