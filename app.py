@@ -35,16 +35,15 @@ def recommend_tracks(seed_track):
 def song_description(song_name,artist_name):
     try:
         prompt=f"楽曲「{song_name}（アーティスト：{artist_name}）の特徴や魅力を簡潔に説明して下さい。」"
-        # response = client.chat.completions.create(
-        #     model="gpt-4o-mini",
-        #     messages=[
-        #             {"role": "system", "content": "あなたは助けになる音楽評論家です。"},
-        #             # {"role": "system", "content": "ユーザーに楽曲のことについて教えて、と言われたら200字程度でレビューしてください"},
-        #             {"role": "user", "content": prompt }
-        #         ]
-        # )
-        # return response.choices[0].message.content
-        return "楽曲「サニー」（アーティスト：w.o.d.）は、リズミカルなビートとキャッチーなメロディーが特徴的です。エネルギッシュなサウンドは聴く人の心を躍らせ、前向きなメッセージが込められています。特に、アーティスト独自のスタイルが反映されており、ジャンルを超えたアプローチが魅力です。歌詞の中にある温かな感情や日常の中の小さな幸せを描写することで、リスナーに共感を呼び起こします。全体的に、ポジティブな雰囲気が漂い、聴く者に明るい気持ちをもたらす楽曲です。"
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                    {"role": "system", "content": "あなたは助けになる音楽評論家です。"},
+                    {"role": "system", "content": "ユーザーに楽曲のことについて教えて、と言われたら200字程度でレビューしてください"},
+                    {"role": "user", "content": prompt }
+                ]
+        )
+        return response.choices[0].message.content
     except Exception as e:
         print(f"OpenAI API Error: {e}")
         return "解説の取得に失敗しました。"
