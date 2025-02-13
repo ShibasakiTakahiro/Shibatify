@@ -34,7 +34,9 @@
 
 3. 選択した楽曲を基に、Spotify APIが類似曲を推薦し、埋め込みされたSpotifyで再生可能です。下にはChatGPTによる詳細な楽曲解説が表示され、楽曲の特徴や魅力を楽しめます。この画面では、Doja Catの「Agora Hills」が推薦されており、Spotifyの埋め込みプレイヤーで再生できます。
 
-|![recommend](https://github.com/user-attachments/assets/73a22409-871d-45a3-8ffd-c758991a46d7)|
+|![recommend](https://github.com/user-attachments/assets/f1bcccd9-fecd-4f00-a88e-272bca0f0b39)|
 |:-:|
+
+<img src="https://github.com/user-attachments/assets/f1bcccd9-fecd-4f00-a88e-272bca0f0b39", width="20%">
 
 
