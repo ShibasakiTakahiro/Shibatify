@@ -2,7 +2,7 @@
 
 ### 概要
 
-Spotify APIとChatGPT APIを活用した楽曲リコメンドWebアプリを開発しました。ユーザーが好きな楽曲を基に新しい音楽を発見できるアプリケーションです。
+Spotify APIとChatGPT APIを活用した楽曲リコメンドWebアプリを開発しました。ユーザーが好きな楽曲を基に新しい音楽を発見できるアプリケーションです。リンクはこちらです。[Shibatify](https://app.shiba-music.com)
 
 ### 特徴
 
